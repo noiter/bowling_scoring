@@ -1,5 +1,6 @@
 package com.vodafone.bowling.tool;
 
+import com.vodafone.bowling.exception.InvalidInputException;
 import com.vodafone.bowling.model.FinalScore;
 import com.vodafone.bowling.model.FrameScore;
 import org.junit.Test;
@@ -11,6 +12,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
 public class BowlingScoreParserTest {
+
     @Test
     public void shouldReturnTenFrameScoresAndFinalScoreGivenCompleteBowlingScoreString() {
         ArrayList result = BowlingScoreParser.parse("10 10 10 10 10 10 10 10 10 10 10 10");
