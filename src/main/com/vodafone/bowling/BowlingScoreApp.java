@@ -19,8 +19,8 @@ public class BowlingScoreApp {
         in.close();
 
         ArrayList result = parse(bowlingScoreString);
-        Object[] objects = (Object[]) result.get(0);
-        FrameScore[] frameScores = copyOf(objects, objects.length, FrameScore[].class);
+        Object[] frameScoreObjects = (Object[]) result.get(0);
+        FrameScore[] frameScores = copyOf(frameScoreObjects, frameScoreObjects.length, FrameScore[].class);
 
         BowlingScoring bowlingScoring = (result.get(1) == null) ?
                 new BowlingScoring(frameScores) :
