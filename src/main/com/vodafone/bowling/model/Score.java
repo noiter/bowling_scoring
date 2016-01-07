@@ -2,7 +2,7 @@ package com.vodafone.bowling.model;
 
 public class Score {
 
-    protected static final int MAX_SCORE_PER_FRAME = 10;
+    public static final int MAX_SCORE_PER_FRAME = 10;
     protected static final int NON_EXISTING_ATTEMPT = -1;
 
     protected int firstScore;
