@@ -1,5 +1,7 @@
 apply plugin: 'java'
 
+sourceCompatibility = 1.7
+
 repositories {
     mavenCentral()
 }
@@ -10,4 +12,10 @@ dependencies {
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.0'
+}
+
+task(calculateScore, dependsOn: 'classes', type: JavaExec) {
+    main = 'com.vodafone.bowling.BowlingScoreApp'
+    classpath = sourceSets.main.runtimeClasspath
+    standardInput = System.in
 }

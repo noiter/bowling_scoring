@@ -15,6 +15,7 @@ public class BowlingScoreApp {
     public static void main(String[] args) throws IOException {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter a string of space separated numbers (Note: each number is between 0 and 10)");
+
         String bowlingScoreString = in.nextLine();
         in.close();
 
@@ -26,6 +27,8 @@ public class BowlingScoreApp {
                 new BowlingScoring(frameScores) :
                 new BowlingScoring(frameScores, (FinalScore) result.get(1));
 
+        System.out.println("==== Result ====");
         System.out.println(bowlingScoring.accumulateScores());
+        System.out.println("====== End =====");
     }
 }
